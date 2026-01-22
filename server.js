@@ -55,7 +55,7 @@ app.delete('/movies/:id', (req, res) => {
     if (movieIndex === -1) return res.status(404).send('Movie not found');
 
     const deletedMovie = movies.splice(movieIndex, 1);
-    res.json(deletedMovie);
+    res.status(200).json({message: "MOVIE HAS BEEN DELETED"});
 })
 
 
